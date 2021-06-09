@@ -25,7 +25,7 @@ print(foods[-1])
 print(foods[0:3])
 
 # the last three items in the list.
-print(foods[-3:-1])
+print(foods[-3:])
 
 # the last item in the sublist.
-print(foods[-1])
+print(foods[6][-1])

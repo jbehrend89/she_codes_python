@@ -1,3 +1,5 @@
+# question 2
+
 mailing_list = [
     ["Chilli", "chilli@thechihuahua.com"],
     ["Roary", "roary@moth.catchers"],
@@ -5,3 +7,10 @@ mailing_list = [
     ["Prince Thomas of Whitepaw", "hrh.thomas@royalty.wp"],
     ["Ivy", "noreply@goldendreamers.xyz"],
 ]
+
+# format and print the list
+print(f"{mailing_list[0][0]}: {mailing_list[0][1]}")
+print(f"{mailing_list[1][0]}: {mailing_list[1][1]}")
+print(f"{mailing_list[2][0]}: {mailing_list[2][1]}")
+print(f"{mailing_list[3][0]}: {mailing_list[3][1]}")
+print(f"{mailing_list[4][0]}: {mailing_list[4][1]}")
