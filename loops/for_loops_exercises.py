@@ -11,11 +11,11 @@ for item in range(1, int(multiply) +1):
 
 addition = int(input("Enter a number."))
 
-sum = 0
+sum1 = 0
 for i in range(addition + 1):
-  sum = sum + i
+  sum1 = sum1 + i
   i = i + 1
-print("Sum is ", sum)
+print("Sum is ", sum1)
 
 
 # for item in range(int(addition)):
@@ -25,5 +25,9 @@ print("Sum is ", sum)
 
 # Given a list, use a for loop to sum all the numbers in the list.
 
-
-
+lst = []
+num = int(input('How many numbers: '))
+for n in range(num):
+    numbers = int(input('Enter number '))
+    lst.append(numbers)
+print("Sum of elements in given list is :", sum(lst))
