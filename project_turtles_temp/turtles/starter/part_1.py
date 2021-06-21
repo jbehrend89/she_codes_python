@@ -1,6 +1,6 @@
 from datetime import datetime
 
-
+# step 2a
 def convert_mmddyyyy_date(date):
     '''Takes a date in the format mm/dd/yyyy and converts it to a datetime object.
 
@@ -11,7 +11,7 @@ def convert_mmddyyyy_date(date):
     '''
     return datetime.strptime(date, '%m/%d/%Y')
 
-
+# step 2b
 def get_month_name(date):
     '''Gets the month name from a datetime object.
 
@@ -36,7 +36,7 @@ def format_text(text, spaces):
     '''
     return f"{text:<{spaces}}"
 
-
+# step 1
 def read_csv_file(file_name):
     '''Reads a csv file and returns the data as a list.
 
@@ -45,7 +45,12 @@ def read_csv_file(file_name):
 
     Returns: a list.
     '''
-    pass
+    import csv
+
+    with open("data/2020_2021_turtle_data.csv", encoding="utf-8") as csv_file:
+        reader = csv.reader(csv_file)
+        for line in reader:
+            print(line)
 
 
 def output_overall_statistics(monthly_data):
