@@ -47,10 +47,16 @@ def read_csv_file(file_name):
     '''
     import csv
 
-    with open("data/2020_2021_turtle_data.csv", encoding="utf-8") as csv_file:
+    reading_file = []
+
+    with open(file_name, encoding="utf-8") as csv_file:
         reader = csv.reader(csv_file)
         for line in reader:
-            print(line)
+            #print(line)
+        
+            reading_file.append(line)
+
+    return reading_file
 
 
 def output_overall_statistics(monthly_data):
@@ -84,7 +90,7 @@ def output_nests_per_month_graph(monthly_data):
     '''
     pass
 
-
+# step 2
 def transform_daily_to_monthly(data):
     '''Transform the data from daily to monthly format.
 
@@ -95,7 +101,15 @@ def transform_daily_to_monthly(data):
     Returns: a list of lists, where each sublist represents data
         for a whole month.
     '''
-    pass
+    test_date = "10/8/2020"
+    test_date = convert_mmddyyyy_date(test_date)
+    print(test_date)
+
+    print(get_month_name(test_date))
+
+    monthly = []
+    for i in data:
+        
 
 
 if __name__ == "__main__":
