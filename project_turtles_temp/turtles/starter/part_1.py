@@ -145,7 +145,7 @@ def transform_daily_to_monthly(data):
             hatched_nests += int(day[3])
             nest_pred += int(day[4])
 
-        print(f"Monthly Statistics:")
+        print(f"Monthly Statistics :")
         print([month, nests, hatched_nests, false_crawls, hit_rocks, nest_pred])
     
     return [month, nests, hatched_nests, false_crawls, hit_rocks, nest_pred]
