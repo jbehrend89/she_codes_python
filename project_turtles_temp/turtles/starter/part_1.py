@@ -59,6 +59,7 @@ def read_csv_file(file_name):
     return reading_file
 
 
+# step 5
 def output_overall_statistics(monthly_data):
     '''Prints a summary of the total number of nests, hatched nests, false
         crawls, hit rocks and nest predation.
@@ -70,6 +71,7 @@ def output_overall_statistics(monthly_data):
     pass
 
 
+# step 4
 def output_monthly_statistics(monthly_data):
     '''Prints a summary of the total number of nests, hatched nests, false crawls,
        hit rocks and nest predation per month.
@@ -80,7 +82,7 @@ def output_monthly_statistics(monthly_data):
     '''
     pass
 
-
+# step 3
 def output_nests_per_month_graph(monthly_data):
     '''Prints a graph of the total number of nests found per month.
 
@@ -109,8 +111,6 @@ def transform_daily_to_monthly(data):
         'February': [],
         'March': []
     }
-
-    # monthly = []
 
     # print(monthly)
     # print(monthly["November"])
@@ -145,7 +145,6 @@ def transform_daily_to_monthly(data):
             hatched_nests += int(day[3])
             nest_pred += int(day[4])
 
-        print(f"Monthly Statistics :")
         print([month, nests, hatched_nests, false_crawls, hit_rocks, nest_pred])
     
     return [month, nests, hatched_nests, false_crawls, hit_rocks, nest_pred]
@@ -181,8 +180,9 @@ def transform_daily_to_monthly(data):
 if __name__ == "__main__":
     all_data = read_csv_file('data/2020_2021_turtle_data.csv')
     all_data.remove(all_data[0])
-    # print(all_data)
+    print(all_data)
     monthly_data = transform_daily_to_monthly(all_data)
+
 
     print('2020/2021 Flatback Turtle Migration at Cemetery Beach')
     print()
