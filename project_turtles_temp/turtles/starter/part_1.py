@@ -81,6 +81,8 @@ def output_monthly_statistics(monthly_data):
             name and total values for that month.
     '''
     pass
+        # total = sum([sum(int(x)) for x in days])
+        # print(total)
 
 # step 3
 def output_nests_per_month_graph(monthly_data):
@@ -91,6 +93,14 @@ def output_nests_per_month_graph(monthly_data):
             name and total values for that month.
     '''
     pass
+# find x by nests / 5 then print string the number * X
+
+    # for ele in range(0, len(nests_oct)):
+    #     print(nests_oct[ele])
+    #     total = nests_oct + nests_oct[ele]
+    # print(f"Number of Nests recorded per month (X = 5 nests):") 
+    # print(f"October : {nests_oct}{total}")
+
 
 # step 2
 def transform_daily_to_monthly(data):
@@ -111,7 +121,6 @@ def transform_daily_to_monthly(data):
         'February': [],
         'March': []
     }
-
     # print(monthly)
     # print(monthly["November"])
 
@@ -126,8 +135,8 @@ def transform_daily_to_monthly(data):
         # new_monthly_data = 
         monthly[month] = monthly[month] + [day[1:6]]
         
-        
     # print(monthly['December'])
+    # complete_monthly_data = 
 
     for month in monthly.keys():
         days = monthly[month]
@@ -148,33 +157,7 @@ def transform_daily_to_monthly(data):
         print([month, nests, hatched_nests, false_crawls, hit_rocks, nest_pred])
     
     return [month, nests, hatched_nests, false_crawls, hit_rocks, nest_pred]
-
-        # total = sum([sum(int(x)) for x in days])
-        # print(total)
-
-
-    # test_date = "10/8/2020"
-    # test_date = convert_mmddyyyy_date(test_date)
-    # print(test_date)
-    # print()
-
-    # print(get_month_name(test_date))
-
-
-
-    # october = 0
-    # nests_oct = [all_data[1:12]]
-    # print(nests_oct)
-
-    # for ele in range(0, len(nests_oct)):
-    #     print(nests_oct[ele])
-    #     total = nests_oct + nests_oct[ele]
-    # print(f"Number of Nests recorded per month (X = 5 nests):") 
-    # print(f"October : {nests_oct}{total}")
-    
-    # monthly = []
-    # for i in data:
-        
+       
 
 
 if __name__ == "__main__":
@@ -182,6 +165,8 @@ if __name__ == "__main__":
     all_data.remove(all_data[0])
     print(all_data)
     monthly_data = transform_daily_to_monthly(all_data)
+    print()
+    print(monthly_data)
 
 
     print('2020/2021 Flatback Turtle Migration at Cemetery Beach')
